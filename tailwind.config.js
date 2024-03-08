@@ -7,6 +7,7 @@ export default {
   theme: {
     colors: {
       'keppel': '#2DBDAC',
+      'green': '#25A192',
       'onyx': '#393E41',
       'puce': '#B4869F',
       'papaya': '#FFEED6',
