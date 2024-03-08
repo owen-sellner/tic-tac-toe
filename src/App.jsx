@@ -6,8 +6,8 @@ function App() {
   const [gameGrid, setGameGrid] = useState(Array(9).fill(0));
 
   useEffect(() => {
-    setIsCircleTurn(!isCircleTurn)
-  }, [gameGrid])
+    setIsCircleTurn(!isCircleTurn);
+  }, [gameGrid, setGameGrid])
 
   return (
     <div className="flex flex-col min-h-screen items-center">
