@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen items-center relative">
       <Board gameGrid={gameGrid} setGameGrid={setGameGrid} isCircleTurn={isCircleTurn} winner={winner} winLocation={winLocation} />
-      {winner !== -1 && winLocation !== "" && <Modal winner={winner} />}
+      {winner !== -1 && <Modal winner={winner} />}
     </div>
   )
 }

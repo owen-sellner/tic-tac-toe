@@ -1,4 +1,4 @@
-import XSvg from "./svg/Xsvg";
+import XSvg from "./svg/XSvg";
 import GridLines from "./GridLines";
 import Toggle from "./Toggle";
 import CircleSvg from "./svg/CircleSvg";
@@ -24,8 +24,8 @@ function Board({ gameGrid, setGameGrid, isCircleTurn, winner, winLocation }) {
                     {gameGrid.map((_, index) => (
                         <div key={index} className="flex items-center justify-center max-h-[125px] h-[15vw] max-w-[125px] w-[15vw] bg-keppel">
                             {winner === -1 && gameGrid[index] === 0 && <div onClick={() => { handleGridChange(index) }} className="h-[100%] w-[100%] z-10 cursor-pointer"></div>}
-                            {gameGrid[index] === 1 && <XSvg size="100%" drawn />}
-                            {gameGrid[index] === 2 && <CircleSvg size="100%" drawn />}
+                            {gameGrid[index] === 1 && <XSvg size="100%" />}
+                            {gameGrid[index] === 2 && <CircleSvg size="100%" />}
                         </div>
                     ))}
                     <GridLines />
