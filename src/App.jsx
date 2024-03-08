@@ -64,6 +64,14 @@ function App() {
   }
 
   useEffect(() => {
+    if (winner !== -1) {
+      setTimeout(() => {
+        window.location.reload(false);
+      }, 5000);
+    }
+  }, [winner])
+
+  useEffect(() => {
     setIsCircleTurn(!isCircleTurn);
     checkGrid();
   }, [gameGrid])
