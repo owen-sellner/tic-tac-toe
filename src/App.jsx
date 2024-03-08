@@ -1,6 +1,6 @@
 import Board from "./components/Board"
 import { useEffect, useState } from "react"
-
+import Modal from "./components/Modal";
 function App() {
   const [isCircleTurn, setIsCircleTurn] = useState(false);
   const [gameGrid, setGameGrid] = useState(Array(9).fill(0));
@@ -69,8 +69,9 @@ function App() {
   }, [gameGrid])
 
   return (
-    <div className="flex flex-col min-h-screen items-center">
+    <div className="flex flex-col min-h-screen items-center relative">
       <Board gameGrid={gameGrid} setGameGrid={setGameGrid} isCircleTurn={isCircleTurn} winner={winner} winLocation={winLocation} />
+      {winner !== -1 && winLocation !== "" && <Modal winner={winner} />}
     </div>
   )
 }
