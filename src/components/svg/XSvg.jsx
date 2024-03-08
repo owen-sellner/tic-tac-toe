@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 function XSvg({ size, drawn = false }) {
     return (
         <>
-            {drawn == true ?
+            {drawn === true ?
                 <svg width={size} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <motion.path
                         initial={{ pathLength: 0 }}

@@ -13,7 +13,7 @@ function WinLine({ winner, winLocation }) {
                     animate={{ pathLength: 1 }}
                     transition={{ duration: 1 }}
                     d={winLocation}
-                    stroke={winner == 1 ? "#393E41" : "#FFEED6"}
+                    stroke={winner === 1 ? "#393E41" : "#FFEED6"}
                     strokeWidth="4"
                 />
             </svg>

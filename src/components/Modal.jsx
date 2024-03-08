@@ -16,7 +16,7 @@ function Modal({ winner }) {
                     </svg>
                 }
             </div>
-            <h1 className={`text-[5vw] mt-10 text-center uppercase font-bold text-onyx`}>{winner == 0 ? "draw" : "winner"}!</h1>
+            <h1 className={`text-[5vw] mt-10 text-center uppercase font-bold text-onyx`}>{winner === 0 ? "draw" : "winner"}!</h1>
         </motion.div>
     );
 };
