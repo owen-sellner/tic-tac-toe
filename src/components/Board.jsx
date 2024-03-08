@@ -1,10 +1,11 @@
 import XSvg from "./svg/Xsvg";
 import GridLines from "./GridLines";
+import Toggle from "./Toggle";
 
 function Board({ gameGrid, setGameGrid, isCircleTurn }) {
     return (
         <>
-            <div className="bg-green max-w-[300px] w-[15vw] h-[7vh] rounded-full my-[10vh]"></div>
+            <Toggle isCircleTurn={isCircleTurn} />
             <div className="relative grid grid-cols-3 grid-rows-3 gap-10">
                 {gameGrid.map((_, index) => (
                     <div key={index} className="flex items-center justify-center max-h-[125px] h-[15vw] max-w-[125px] w-[15vw] bg-keppel">
