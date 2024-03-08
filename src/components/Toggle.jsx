@@ -5,7 +5,7 @@ const toggleVariants = {
         pathLength: 0.25,
         pathOffset: 0.2,
         transition: {
-            duration: 0.25,
+            duration: 0.5,
         }
     },
 
@@ -13,7 +13,7 @@ const toggleVariants = {
         pathLength: 0.25,
         pathOffset: 0.55,
         transition: {
-            duration: 0.25,
+            duration: 0.5,
         }
     }
 };
@@ -21,7 +21,7 @@ const toggleVariants = {
 function Toggle({ isCircleTurn }) {
     return (
         <>
-            <div className="max-w-[300px] w-[25vw] my-[5vh]">
+            <div className="max-w-[300px] w-[65vw] my-[5vh]">
                 <svg width="100%" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
                     <motion.path
                         strokeLinecap="round"
