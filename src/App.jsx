@@ -1,11 +1,19 @@
 import XSvg from "./components/svg/Xsvg"
 import Board from "./components/Board"
+import { useEffect, useState } from "react"
 
 function App() {
+  const [isCircleTurn, setIsCircleTurn] = useState(false);
+  const [gameGrid, setGameGrid] = useState(Array(9).fill(0));
+
+  useEffect(() => {
+    setIsCircleTurn(!isCircleTurn)
+  }, [gameGrid])
+
   return (
     <>
       <div className="flex flex-col min-h-screen items-center">
-        <Board />
+      <Board gameGrid={gameGrid} setGameGrid={setGameGrid} isCircleTurn={isCircleTurn} />
       </div>
       {/* X SVG */}
       <svg width="125" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
