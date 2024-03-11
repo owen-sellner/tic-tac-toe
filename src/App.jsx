@@ -46,7 +46,7 @@ function App() {
       setWinLocation("M 10,10 L 90,90")
       return;
     }
-    if (gameGrid[2] !== 0 && gameGrid[3] === gameGrid[4] && gameGrid[4] === gameGrid[6]) {
+    if (gameGrid[2] !== 0 && gameGrid[2] === gameGrid[4] && gameGrid[4] === gameGrid[6]) {
       setWinner(gameGrid[2])
       setWinLocation("M 90,10 L 10,90")
       return;
